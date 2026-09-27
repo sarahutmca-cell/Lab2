@@ -2,21 +2,35 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     
+
 }
 
 body{
-    background-color: #e29d75 ;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #f1d2de;
+    font-family: font1;
+    
 }
+
+@font-face {
+    font-family: font1;
+    src: url(font/font1.ttf);
+}
+
+
+
+
 
 .headernav{
     display: flex;
     justify-content: space-between;
-    flex-direction: row ;
-    background-color: #c96551;
+    flex-direction: column ;
+    background-color: rgb(212, 138, 170);
     align-items: flex-start;
     height: auto;
+    border: solid 1px;
+    padding: 10px;
 }
 
 .nav-links {
@@ -24,10 +38,12 @@ body{
     gap: 1rem;
     margin-top: 10px;
     padding: 20px;
+    flex-grow: 1;
 }
 
 ul li a {
     text-decoration: none;
+    font-size: larger;
 }
 
 li {
@@ -35,12 +51,19 @@ li {
 }
 
 .container {
-   background-color: #f2a987;
-   margin: 0px;
-
+    display: flex;
+    flex-direction: column;
+    background-color: #fbefe8;
+    width: auto;
+    margin: 0 30px;
+    padding: 20px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    border: solid 1px;
+    border-radius: 40px;
 }
 
-.logo {
+#logo {
     font-size: 50px;
     font-style: italic;
 }
@@ -48,10 +71,107 @@ li {
 h2 {
     text-align: center;
     margin-top: 20px;
+    font-style: italic;
 }
-p {
-        text-align: center;
-        margin-bottom: 10px;
-        padding: 10px;
 
+
+.bio-hero {
+    margin: 4px;
+    padding: 10px;
+    flex-basis: 100%;
+}
+
+.para {
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+
+.card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    padding: 10px;
+    flex-basis: 100%;
+}
+
+.photos {
+    width: 300px;
+   display: block;
+   margin: 10px auto;
+   padding: 10px;
+   
+    
+
+    
+}
+
+.card1{
+    border: solid 1px;
+    flex-basis: 30%;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 10px 18px 5px rgb(107, 106, 106);
+    justify-content: space-between
+    background-color: #ffffff;
+   
+
+}
+
+
+.card2{
+    border: solid 1px;
+    flex-basis: 30%;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 10px 18px 5px rgb(107, 106, 106);
+    justify-content: space-between
+    background-color: #ffffff;
+
+   
+
+
+}
+
+
+.card3{
+    border: solid 1px;
+    flex-basis: 30%;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 10px 18px 5px rgb(107, 106, 106);
+    justify-content: space-between
+    background-color: #ffffff;
+
+  
+   
+}
+
+h1 {
+    text-align: center;
+    
+}
+
+
+footer{
+    background-color: rgb(212, 138, 170);
+    text-align: center;
+    padding: 10px;
+    border: solid 1px;
+    
+}
+
+
+@media (Min-width:768px) {
+    .headernav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+        .card-grid {
+            flex-direction: row;
+        }
+   
 }
